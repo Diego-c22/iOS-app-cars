@@ -6,29 +6,102 @@
 //
 
 import UIKit
+var carSelected: Car?
 
 class CarTableViewController: UITableViewController {
+    
+    var cars = [Car]()
 
+    @IBAction func Nav(_ sender: Any) {
+        performSegue(withIdentifier: "StoryMap", sender: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadSampleCars()
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "CarDetailsID" {return}
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let selectedCar = cars[indexPath.row]
+            if let destination = segue.destination as? ViewController {
+                destination.selectedCar = selectedCar
+            }
+        }
+            
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+
+        return cars.count
+    }
+
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "CarTableViewCell"
+
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CarTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of CarTableViewCell.")
+        }
+        
+        let car = cars[indexPath.row]
+        
+        cell.carLabel.text = car.model + " " + car.brand + " " + String(car.year)
+        cell.carImage.image = UIImage(named: car.photo)
+        cell.carDescription.text = String(car.price)
+        
+        return cell
+    }
+    
+    
+    
+    private func loadSampleCars(){
+        
+        guard let car1 = Car(engine: "V4", photo: "cx3", garantee: "8 years", kilometers: 0, year: 2022, price: 430_000, brand: "MAZDA", model: "CX3")
+        else {
+            fatalError("Unable to instantiate car1")
+        }
+        
+        guard let car2 = Car(engine: "V6", photo: "cx5", garantee: "8 years", kilometers: 0, year: 2023, price: 650_000, brand: "MAZDA", model: "cx5")
+        else {
+            fatalError("Unable to instantiate car2")
+        }
+        
+        guard let car3 = Car(engine: "L3", photo: "m2", garantee: "4 years", kilometers: 0, year: 2023, price: 380_000, brand: "MAZDA", model: "2")
+        else {
+            fatalError("Unable to instantiate car3")
+        }
+        
+        guard let car4 = Car(engine: "V4", photo: "mazda3", garantee: "6 years", kilometers: 0, year: 2023, price: 560_000, brand: "MAZDA", model: "3")
+        else {
+            fatalError("Unable to instantiate car3")
+        }
+
+        guard let car5 = Car(engine: "V4 Bi-Turbo", photo: "mx5", garantee: "8 years", kilometers: 0, year: 2023, price: 670_000, brand: "MAZDA", model: "MX-5")
+        else {
+            fatalError("Unable to instantiate car3")
+        }
+
+        
+        cars += [car1, car2, car3, car4, car5]
+        
+        
     }
 
     /*
