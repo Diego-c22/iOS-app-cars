@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25050CFF2B1285D9007A7258 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25050CFE2B1285D9007A7258 /* MapViewController.swift */; };
 		2C79F36928DCC57300A3BBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F36828DCC57300A3BBAB /* AppDelegate.swift */; };
 		2C79F36B28DCC57300A3BBAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F36A28DCC57300A3BBAB /* SceneDelegate.swift */; };
 		2C79F36D28DCC57300A3BBAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F36C28DCC57300A3BBAB /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 		2C79F38028DCC57400A3BBAB /* tablesStoryboardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F37F28DCC57400A3BBAB /* tablesStoryboardsTests.swift */; };
 		2C79F38A28DCC57400A3BBAB /* tablesStoryboardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F38928DCC57400A3BBAB /* tablesStoryboardsUITests.swift */; };
 		2C79F38C28DCC57400A3BBAB /* tablesStoryboardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F38B28DCC57400A3BBAB /* tablesStoryboardsUITestsLaunchTests.swift */; };
+		2C8D974228DE06BC0095AA64 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D974128DE06BC0095AA64 /* Car.swift */; };
+		2C8D974628DE24EC0095AA64 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D974528DE24EC0095AA64 /* CarTableViewCell.swift */; };
+		2C8D974828DE2BCD0095AA64 /* CarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D974728DE2BCD0095AA64 /* CarTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25050CFE2B1285D9007A7258 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2C79F36528DCC57300A3BBAB /* tablesStoryboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tablesStoryboards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C79F36828DCC57300A3BBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C79F36A28DCC57300A3BBAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		2C79F38528DCC57400A3BBAB /* tablesStoryboardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tablesStoryboardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C79F38928DCC57400A3BBAB /* tablesStoryboardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tablesStoryboardsUITests.swift; sourceTree = "<group>"; };
 		2C79F38B28DCC57400A3BBAB /* tablesStoryboardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tablesStoryboardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C8D974128DE06BC0095AA64 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		2C8D974528DE24EC0095AA64 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		2C8D974728DE2BCD0095AA64 /* CarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,17 @@
 		2C79F36728DCC57300A3BBAB /* tablesStoryboards */ = {
 			isa = PBXGroup;
 			children = (
+				2C8D974128DE06BC0095AA64 /* Car.swift */,
 				2C79F36828DCC57300A3BBAB /* AppDelegate.swift */,
 				2C79F36A28DCC57300A3BBAB /* SceneDelegate.swift */,
 				2C79F36C28DCC57300A3BBAB /* ViewController.swift */,
+				2C8D974528DE24EC0095AA64 /* CarTableViewCell.swift */,
+				2C8D974728DE2BCD0095AA64 /* CarTableViewController.swift */,
 				2C79F36E28DCC57300A3BBAB /* Main.storyboard */,
 				2C79F37128DCC57400A3BBAB /* Assets.xcassets */,
 				2C79F37328DCC57400A3BBAB /* LaunchScreen.storyboard */,
 				2C79F37628DCC57400A3BBAB /* Info.plist */,
+				25050CFE2B1285D9007A7258 /* MapViewController.swift */,
 			);
 			path = tablesStoryboards;
 			sourceTree = "<group>";
@@ -260,7 +272,11 @@
 			files = (
 				2C79F36D28DCC57300A3BBAB /* ViewController.swift in Sources */,
 				2C79F36928DCC57300A3BBAB /* AppDelegate.swift in Sources */,
+				2C8D974228DE06BC0095AA64 /* Car.swift in Sources */,
 				2C79F36B28DCC57300A3BBAB /* SceneDelegate.swift in Sources */,
+				2C8D974828DE2BCD0095AA64 /* CarTableViewController.swift in Sources */,
+				2C8D974628DE24EC0095AA64 /* CarTableViewCell.swift in Sources */,
+				25050CFF2B1285D9007A7258 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
