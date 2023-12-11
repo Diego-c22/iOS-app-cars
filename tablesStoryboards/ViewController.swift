@@ -10,6 +10,10 @@ import UIKit
 class ViewController: UIViewController {
     var selectedCar: Car?
     
+    @IBAction func Psuh(_ sender: Any) {
+        performSegue(withIdentifier: "ExtraDetail", sender: nil)
+    }
+    
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var engine: UILabel!
@@ -34,4 +38,5 @@ class ViewController: UIViewController {
 
 
 }
+
 

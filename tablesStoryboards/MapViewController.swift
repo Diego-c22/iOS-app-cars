@@ -10,7 +10,6 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController /*MKMapViewDelegate*/ {
-    
     let map = MKMapView()
 
     override func viewDidLoad() {
